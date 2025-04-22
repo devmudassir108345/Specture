@@ -1,0 +1,42 @@
+.fancy-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    column-gap: 5.2rem;
+    row-gap: 3rem;
+
+    &-lg{
+      grid-template-columns: repeat(auto-fit, minmax(36rem, 1fr));
+    }
+    // gap: 20px;
+
+  }
+  
+  .fancy-gallery a {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  .fancy-gallery a:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  }
+  
+  .fancy-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+  
+  .fancy-gallery a:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* Optional: Add a caption overlay on hover */
+  
+  

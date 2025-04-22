@@ -1,0 +1,39 @@
+.investors {
+  margin: 5rem 0;
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3.4em;
+
+    @media (max-width: 1000px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 767px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__item {
+    border-radius: 15px;
+    overflow: hidden;
+  }
+
+  &__img {
+    height: 181px;
+    width: 100%;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__content {
+    background-color: $color-white;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    // border-radius: 15px;
+  }
+}

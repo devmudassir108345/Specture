@@ -1,0 +1,71 @@
+
+/////////////////////////////////////////////
+
+////////////////IMPORT SASS FILES///////////
+
+///////////////////////////////////////////
+// abstract (global utilities)
+
+// base (reset and typography)
+@import 'abstract/variable';
+@import 'bass/bass';
+@import 'bass/typography.scss';
+
+
+@import 'abstract/mixins';
+@import 'abstract/icon-store';
+@import 'abstract/animation';
+
+// layout (header, footer, breakpoints)
+@import 'layout/breakpoint';
+@import 'layout/header';
+@import 'layout/footer';
+
+// components (hero, about, services, etc.)
+
+@import 'components/hero';
+@import 'components/about.scss';
+@import 'components/solution';
+@import 'components/solutions';
+@import 'components/leanrning';
+@import 'components/showcase';
+@import 'components/find.scss';
+@import 'components/contec';
+@import 'components/popus';
+@import 'components/banner';
+@import 'components/about-sections.scss';
+@import 'components/team';
+@import 'components/help';
+@import 'components/inside';
+@import 'components/new';
+@import 'components/single-news';
+@import 'components/contact';
+@import 'components/learning-soltions';
+@import 'components/learning_solutiuons-specific';
+@import 'components/knowledge-center';
+@import 'components/knowledege-center-specific.scss';
+@import 'components/profile';
+@import 'components/projects';
+@import 'components/clinets';
+@import 'components/testimonail';
+@import 'components/accordion';
+@import 'components/section';
+@import 'components/products';
+@import 'components/sitemap';
+@import 'components/menu.scss';
+@import 'components/heardware';
+@import 'components/software';
+@import 'components/profession';
+@import 'components/feature';
+@import 'components/layout';
+@import 'components/product';
+@import 'components/gallery';
+@import 'components/tabs';
+@import 'components/pricing-table';
+@import 'components/report';
+@import 'components/icon__box';
+@import 'components/timeline';
+@import 'components/investor';
+@import 'components/maps';
+
+

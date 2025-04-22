@@ -1,0 +1,598 @@
+// // Variables
+// $font-family: 'Inter', sans-serif;
+
+// // Colors
+// $color-background: #f5f7fa;
+// $color-white: #ffffff;
+// $color-text-primary: #1a202c;
+// $color-text-secondary: #4a5568;
+// $color-text-muted: #a0aec0;
+// $color-border: #e2e8f0;
+// $color-hover: #f7fafc;
+// $color-even-row: #f8fafc;
+// $color-checkmark: #2c7a7b;
+// $color-button-border: #2d3748;
+// $color-cta: #00e5c7;
+// $color-cta-hover: #00d2b6;
+
+// // Spacing
+// $spacing-xs: 5px;
+// $spacing-sm: 10px;
+// $spacing-md: 16px;
+// $spacing-lg: 20px;
+// $spacing-xl: 24px;
+// $spacing-xxl: 30px;
+// $spacing-xxxl: 40px;
+
+// // Shadows
+// $shadow-sm: 0 4px 12px rgba(45, 55, 72, 0.15);
+// $shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+// $shadow-lg: 0 6px 20px rgba(0, 229, 199, 0.4);
+// $shadow-cta: 0 4px 14px rgba(0, 229, 199, 0.3);
+
+// // Border Radius
+// $radius-sm: 8px;
+// $radius-md: 12px;
+// $radius-lg: 24px;
+// $radius-xl: 30px;
+
+// // Transitions
+// $transition-default: all 0.3s ease;
+// $transition-fast: all 0.2s ease;
+
+// // Mixins
+// @mixin flex-center {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// @mixin flex-between {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+// }
+
+// @mixin button-base {
+//   cursor: pointer;
+//   font-weight: 600;
+//   transition: $transition-default;
+//   letter-spacing: 0.5px;
+// }
+
+// @mixin hover-lift {
+//   &:hover {
+//     transform: translateY(-2px);
+//   }
+// }
+
+// // Base Styles
+
+
+// // Page Header
+
+// // Table Section
+// .table-section {
+//   margin-bottom: $spacing-lg;
+ 
+  
+//   &__wrapper {
+//     overflow-x: auto;
+//     border-radius: $radius-sm;
+//     padding: 5rem;
+//     background-color: $color-white;
+//   }
+// }
+
+// // Compare Table
+// .compare-table {
+//   width: 100%;
+//   border-collapse: separate;
+//   border-spacing: 0;
+//   table-layout: fixed;
+  
+//   // Table Head
+//   &__head {
+//     background-color: $color-white;
+//   }
+  
+
+
+
+//   // Table Headers
+//   &__header {
+//     padding: $spacing-md $spacing-lg;
+//     text-align: center;
+//     font-weight: 600;
+//     color: $color-text-primary;
+//     border-bottom: 2px solid $color-border;
+//     font-size: 2rem;
+    
+//     &--feature {
+//       text-align: left;
+//       color: $color-text-secondary;
+//       font-size: 1.4rem;
+//       text-transform: uppercase;
+//       letter-spacing: 0.5px;
+//     }
+    
+//     &--product {
+//       position: relative;
+//     }
+//   }
+  
+//   // Table Body
+//   &__body {
+//     background-color: $color-white;
+//   }
+  
+//   // Table Rows
+//   &__row {
+//     transition: $transition-fast;
+    
+//     &:hover {
+//       background-color: $color-hover;
+//     }
+    
+//     &:nth-child(even) {
+//       background-color: $color-white-2;
+//     }
+    
+//     &--buttons {
+//       background-color: transparent !important;
+//     }
+//   }
+  
+//   // Table Cells
+//   &__cell {
+//     padding: $spacing-md $spacing-lg;
+//     text-align: center;
+//     border-bottom: 1px solid $color-border;
+    
+//     &--feature {
+//       text-align: left;
+//       color: $color-text-secondary;
+//       font-weight: 500;
+//       font-size: 15px;
+//     }
+    
+//     &--value {
+//       position: relative;
+//     }
+    
+//     &--button {
+//       padding: $spacing-xl $spacing-sm;
+//       border-bottom: none;
+//     }
+    
+//     &--empty {
+//       border-bottom: none;
+//     }
+//   }
+  
+//   // Table Indicators
+//   &__checkmark {
+//     @include flex-center;
+//     color: $color-checkmark;
+//     font-weight: bold;
+//     font-size: 20px;
+//   }
+  
+//   &__dash {
+//     @include flex-center;
+//     color: $color-text-muted;
+//     font-weight: bold;
+//     font-size: 20px;
+//   }
+  
+//   // Table Footer
+//   &__foot {
+//     background-color: $color-white;
+//   }
+// }
+
+// .table{
+//     &__footer{
+//         border-top: 2px solid $color-button-border;
+//         padding: 3.6rem 0;
+//         margin-top: 2rem;
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-between;
+//         gap: 5rem;
+//         flex-wrap: wrap;
+       
+
+//         &-card{
+//             background-color: $color-secondary;
+//             padding: 4.5rem 5rem;
+//             border-radius: $radius-md;
+//         }
+//     }
+//   }
+
+// // Action Buttons
+
+
+// // Page Divider
+// .page-divider {
+//   height: 1px;
+//   background-color: $color-border;
+//   border: none;
+//   margin: $spacing-xxxl 0;
+// }
+
+// // Help Section
+// .help-section {
+//   @include flex-between;
+//   padding: $spacing-sm 0;
+  
+//   &__content {
+//     flex: 1;
+//   }
+  
+//   &__title {
+//     color: $color-text-primary;
+//     font-size: 24px;
+//     font-weight: 600;
+//     margin-bottom: $spacing-xs;
+//     letter-spacing: -0.5px;
+//   }
+  
+//   &__subtitle {
+//     color: $color-text-secondary;
+//     font-size: 20px;
+//     font-weight: 400;
+//   }
+  
+//   &__cta {
+//     flex: 1;
+//     display: flex;
+//     justify-content: flex-end;
+//   }
+// }
+
+// // Responsive Styles
+// @media (max-width: 768px) {
+//   .page-container {
+//     padding: $spacing-lg;
+//   }
+  
+//   .help-section {
+//     flex-direction: column;
+//     text-align: center;
+//     gap: $spacing-xl;
+    
+//     &__cta {
+//       justify-content: center;
+//     }
+//   }
+  
+//   .compare-table {
+//     &__header, 
+//     &__cell {
+//       padding: $spacing-sm $spacing-sm;
+//       font-size: 14px;
+//     }
+    
+//     &__cell--feature {
+//       font-size: 14px;
+//     }
+//   }
+  
+//   .action-button {
+//     &--learn {
+//       padding: 8px 16px;
+//       font-size: 12px;
+//     }
+    
+//     &--cta {
+//       width: 100%;
+//       justify-content: center;
+//     }
+//   }
+// }
+
+
+
+
+
+.pricing-wrapper {
+    width: 100%;
+    
+    margin: 5rem auto;
+    padding: 0;
+}
+
+/* Container for the pricing table */
+.pricing-container {
+    width: 100%;
+    border: 1px solid #e0f7fa;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Pricing table */
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+/* Table head */
+.pricing-table__head {
+    background-color: #fff;
+}
+
+/* Table rows */
+.pricing-table__row {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.pricing-table__row--title {
+    border-bottom: none;
+}
+
+.pricing-table__row--headers {
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.pricing-table__row--odd {
+    background-color: #f5f5f5;
+}
+
+.pricing-table__row--even {
+    background-color: #fff;
+}
+
+.pricing-table__row--buttons {
+    background-color: #fff;
+}
+
+/* Table cells */
+.pricing-table__cell {
+    padding: 15px;
+    text-align: center;
+}
+
+.pricing-table__cell--title {
+    padding: 25px 15px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+.pricing-table__cell--feature-title {
+    text-align: left;
+    padding-left: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.pricing-table__cell--plan-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    padding: 15px 10px;
+}
+
+.pricing-table__cell--feature {
+    text-align: left;
+    padding-left: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+.pricing-table__cell--check {
+    font-size: 16px;
+    color: #4caf50;
+    font-weight: bold;
+}
+
+.pricing-table__cell--empty {
+    background-color: #fff;
+}
+
+.pricing-table__cell--button {
+    padding: 20px 10px;
+}
+
+/* Button styles */
+.pricing-table__button {
+    padding: 8px 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    color: #333;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    width: 100%;
+    max-width: 150px;
+}
+
+.pricing-table__button:hover {
+    background-color: #f5f5f5;
+    border-color: #999;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 992px) {
+    .pricing-table__cell--title {
+        font-size: 22px;
+        padding: 20px 15px;
+    }
+    
+    .pricing-table__cell--feature-title,
+    .pricing-table__cell--plan-title {
+        font-size: 13px;
+        padding: 12px 8px;
+    }
+    
+    .pricing-table__cell--feature {
+        font-size: 13px;
+        padding: 12px 15px;
+    }
+    
+    .pricing-table__cell--check {
+        padding: 12px 8px;
+    }
+    
+    .pricing-table__button {
+        padding: 6px 15px;
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .pricing-container {
+        border-radius: 6px;
+    }
+    
+    .pricing-table__cell--title {
+        font-size: 20px;
+        padding: 18px 10px;
+    }
+    
+    .pricing-table__cell--feature-title,
+    .pricing-table__cell--plan-title {
+        font-size: 12px;
+        padding: 10px 5px;
+    }
+    
+    .pricing-table__cell--feature {
+        font-size: 12px;
+        padding: 10px 10px 10px 15px;
+    }
+    
+    .pricing-table__cell--check {
+        padding: 10px 5px;
+    }
+    
+    .pricing-table__button {
+        padding: 5px 10px;
+        font-size: 10px;
+        max-width: 120px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .pricing-wrapper {
+        padding: 0;
+    }
+    
+    .pricing-container {
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+        box-shadow: none;
+    }
+    
+    /* Professional mobile layout with plan cards */
+    .pricing-table__head {
+        display: block;
+    }
+    
+    .pricing-table__row--title {
+        display: block;
+    }
+    
+    .pricing-table__cell--title {
+        display: block;
+        text-align: center;
+        padding: 20px 15px;
+        font-size: 22px;
+    }
+    
+    /* Hide the original header row */
+    .pricing-table__row--headers {
+        display: none;
+    }
+    
+    /* Create plan cards for mobile */
+    .pricing-table__body {
+        display: block;
+    }
+    
+    /* Style for plan cards */
+    .pricing-table__row--feature {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 0;
+        border-bottom: 1px solid #e0e0e0;
+        background-color: #fff !important;
+    }
+    
+    .pricing-table__cell--feature {
+        flex: 1 0 100%;
+        display: block;
+        padding: 15px;
+        font-weight: 600;
+        color: #333;
+        background-color: #f5f5f5;
+        border-bottom: 1px solid #e0e0e0;
+        font-size: 14px;
+    }
+    
+    .pricing-table__cell--check {
+        flex: 1 0 50%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+    }
+    
+    .pricing-table__cell--check::before {
+        content: attr(data-plan);
+        display: inline-block;
+        margin-right: 10px;
+        font-size: 13px;
+        font-weight: 500;
+        color: #333;
+    }
+    
+    /* Button row styling for mobile */
+    .pricing-table__row--buttons {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .pricing-table__cell--empty {
+        display: none;
+    }
+    
+    .pricing-table__cell--button {
+        flex: 1 0 50%;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    .pricing-table__button {
+        width: 100%;
+        max-width: none;
+        padding: 10px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .pricing-table__cell--check {
+        flex: 1 0 100%;
+    }
+    
+    .pricing-table__cell--button {
+        flex: 1 0 100%;
+    }
+}

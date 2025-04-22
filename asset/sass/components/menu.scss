@@ -1,0 +1,333 @@
+.menu {
+  border-top: 1px solid $color-white;
+  transition: all 0.5s ease;
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+  height: 0;
+  overflow: scroll !important;
+  @media (min-width: 1200px) {
+    // margin-top: -5rem;
+  
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__hidden {
+    overflow: scroll !important;
+    
+   
+    @media (min-width: 1200px) {
+      height: 82rem;
+      margin-top: 0;
+      opacity: 1;
+      overflow: scroll !important;
+      visibility: visible;
+
+    }
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -500px;
+    width: 300px;
+    height: 100%;
+    background-color: $color-primary;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    z-index: 999;
+
+    &-back {
+      display: flex;
+      gap: 2rem;
+      align-items: baseline;
+      padding-left: 2rem;
+    }
+
+    &-top,
+    &-lower {
+      padding: 4rem 0;
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0rem;
+        margin: 0;
+      }
+    }
+    &-top {
+      // padding: 2rem 0;
+      border-bottom: 1px solid $color-white;
+    }
+
+    &__header {
+      margin-bottom: 4rem;
+
+      @media (min-width: 1200px) {
+        display: none;
+      }
+    }
+
+    &__close {
+      color: $color-white;
+      font-size: 1.8rem;
+      position: absolute;
+      right: 2rem;
+      top: 5rem;
+      height: 3rem;
+      width: 3rem;
+      border: 2px solid $color-white;
+      border-radius: 50%;
+      align-content: center;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s;
+      z-index: 10;
+
+      &-1 {
+        @media (max-width: 1200px) {
+          display: none;
+        }
+      }
+
+      &:hover {
+        background-color: $color-white;
+        color: $color-black;
+      }
+    }
+
+    &.active {
+      left: 0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin: 10px 0;
+
+        a {
+          color: #fff;
+          text-decoration: none;
+          font-size: 2rem;
+          display: block;
+          padding: 5px 0;
+          text-transform: capitalize;
+          font-weight: 500;
+
+          &:hover {
+            color: $color-secondary;
+          }
+        }
+        .view-all {
+          color: $color-gray;
+        }
+      }
+    }
+  }
+
+  .sub-dropdown {
+    top: 0% !important;
+  }
+
+  .dropdown,
+  .sub-dropdown {
+    position: absolute;
+    top: 15%;
+    right: -100%;
+    width: 100%;
+    background-color: $color-primary;
+    height: 100%;
+    transition: all 0.3s ease;
+
+    ul {
+      list-style: none;
+      padding-left: 20px;
+
+      @media (min-width: 1200px) {
+        padding-left: 40px;
+      }
+      li {
+        margin: 10px 0;
+      }
+    }
+
+    &.active {
+      right: 0px;
+    }
+  }
+
+  .back-btn {
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-primary;
+    }
+  }
+
+  .title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  .toggle-dropdown,
+  .toggle-sub-dropdown {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+
+    @media (max-width: 1000px) {
+      width: 98%;
+    }
+
+    p {
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      color: $color-secondary;
+      p {
+        padding-left: 2rem;
+      }
+    }
+  }
+
+  .toggle-sub-dropdown {
+    width: 94%;
+  }
+  /* ====================== DESKTOP LAYOUT ====================== */
+  @media (min-width: 1200px) {
+    .menu-btn {
+      display: none;
+    }
+
+    .sidebar {
+      position: relative;
+      left: 0;
+      width: 325px;
+      height: 100%;
+      box-shadow: none;
+      background: none;
+      overflow: unset;
+      padding: 0;
+
+      &::after {
+        content: "";
+        height: 130%;
+        width: 1px;
+        background-color: $color-white;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0%;
+        z-index: 0;
+      }
+
+      &-top,
+      &-lower {
+        padding: 4rem 0;
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 0rem;
+          margin: 0;
+        }
+      }
+      &-top {
+        // padding: 2rem 0;
+        border-bottom: 1px solid $color-white;
+      }
+    }
+
+    .dropdown,
+    .sub-dropdown {
+      position: absolute;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      height: 100%;
+      padding: 4rem 0;
+      //   overflow-y: hidden;
+
+      background: none;
+      //   display: none;
+      transition: all 0.5s ease;
+      transform: translateX(0%);
+      opacity: 0;
+      visibility: hidden;
+      //   background-color: green;
+    }
+
+    .dropdown {
+      &::after {
+        content: "";
+        height: 130%;
+        width: 1px;
+        background-color: $color-white;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 10;
+      }
+    }
+    .dropdown.active,
+    .sub-dropdown.active {
+      display: block;
+    }
+
+    .back-btn,
+    .title {
+      display: none;
+    }
+
+    .sidebar ul li:hover > .dropdown {
+      //   display: block !important;
+      transform: translateX(0%);
+      padding-left: 0 !important;
+      visibility: visible;
+      opacity: 1;
+      transition: all 1s;
+    }
+
+    .dropdown li:hover > .sub-dropdown {
+      transform: translateX(0%);
+      padding-left: 0 !important;
+      visibility: visible;
+      opacity: 1;
+      transition: all 1s;
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  transition: all 1.6s ease;
+  opacity: 1;
+
+  &__hidden {
+    display: none;
+    opacity: 0;
+  }
+}

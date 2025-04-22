@@ -1,0 +1,39 @@
+.banner {
+  height: 585px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  &-2{
+    padding: 7rem 0;
+    border-radius: 15px;
+    
+    &__container{
+      max-width: 622px;
+    width: 100%;
+    margin: 0 auto;
+    }
+  }
+
+
+  &__container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 430px;
+    width: 85%;
+  }
+
+  .section__breadcrums{
+    justify-content: center;
+  }
+
+  &__title {
+    // padding: 1.6rem clamp(8rem, 10vw, 8vw);
+    width: 100%;
+    border: 1px solid $color-primary;
+    border-radius: 50px;
+    text-align: center;
+  }
+}

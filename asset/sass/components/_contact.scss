@@ -1,0 +1,102 @@
+.contact {
+  padding: 9rem 0;
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+
+    @media (max-width: 1100px ) {
+        grid-template-columns: 1fr;
+        gap: 8rem;
+    }
+  }
+
+  &__col {
+    &-1 {
+      max-width: 513px;
+      width: 100%;
+
+      @media (max-width: 1100px ) {
+        max-width: 100%;
+    }
+    }
+
+    &-2{
+        border-radius: 15px;
+        box-shadow: 0 1rem 1rem rgba($color-black, .2);
+    }
+  }
+
+  &__form {
+    padding: 5rem 6.4rem;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+
+  .form {
+    &__group {
+      &-main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+
+        @media (max-width: 600px ) {
+            grid-template-columns: 1fr;
+        }
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 1.5rem 0;
+        font-size: 1.6rem;
+        font-weight: 500;
+        border-bottom: 1px solid $color-primary;
+        outline: none;
+        color: $color-primary;
+        resize: none;
+
+        &::placeholder {
+          text-transform: capitalize;
+          color: $color-primary;
+        }
+      }
+
+      textarea {
+        height: 10.8rem;
+      }
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__social {
+    display: flex;
+    gap: 1.2rem;
+
+    i {
+      height: 4rem;
+      width: 4rem;
+      align-content: center;
+      text-align: center;
+      border: 2px solid $color-primary;
+      border-radius: 50%;
+      font-size: 2rem;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: $color-primary;
+        color: $color-white;
+      }
+    }
+  }
+}

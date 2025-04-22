@@ -1,0 +1,110 @@
+.product {
+  padding: 3rem 0;
+  &__container {
+    display: grid;
+    grid-template-columns: 30% 66% ;
+    gap: 5rem;
+    position: relative;
+
+    &-2{
+      grid-template-columns: 66% 30%;
+
+      .product__col-left{
+        height:50rem;
+        @media (max-width : 1250px) {
+          grid-row: 1;
+        }
+      }
+    }
+
+    @media (max-width: 1250px) {
+      grid-template-columns: 100%;
+    }
+  }
+
+  &__col {
+    width: 100%;
+
+    &-upper {
+      box-shadow: 0.3rem 1rem 2rem rgba($color-black, 0.1);
+      padding: 4.5rem;
+
+      position: relative;
+      &::after,
+      &::before {
+        content: "";
+        height: 100%;
+        width: 1000px;
+        background-color: $color-white;
+        position: absolute;
+        top: 0;
+        z-index: -0;
+      }
+
+      &::after {
+        right: -1000px;
+      }
+
+      &::before {
+        left: -1000px;
+      }
+
+      @media (max-width: 600px) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    &-left {
+      position: sticky;
+      top: -20px;
+
+      height: 95rem;
+
+      @media (max-width: 1250px) {
+        position: unset;
+      }
+
+      .text {
+        width: 90%;
+      }
+    }
+
+    &-right {
+      border-radius: 15px;
+      
+      @media (min-width : 600px) {
+        overflow: hidden;
+      }
+
+      .text-2 {
+        max-width: 748px;
+        width: 100%;
+      }
+    }
+  }
+
+  &__img {
+    background-color: $color-white;
+    height: 539px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+
+    img {
+      width: 80%;
+      height: 90%;
+    }
+  }
+  &__btns {
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+  }
+
+  .btn-next {
+    right: 0;
+  }
+}

@@ -1,0 +1,77 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  // @media (max-width: 1500px) {
+  //   font-size: 55%;
+  // }
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+body {
+  box-sizing: inherit;
+  
+  @media (max-width : 1300px) {
+    overflow: hidden;
+  }
+  
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: "Area-normal-reugular";
+  src: url("/asset/font/AreaInktrapTrial-Regular-BF65ea75c6662c7-iF663c9153cda6c.otf")
+    format("opentype");
+
+  font-weight: 400; // Regular
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Area-normal-bold";
+  src: url("/asset/font/AreaInktrapTrial-Bold-BF65ea75c66612f-iF663c9153b89d9.otf")
+    format("opentype");
+
+  font-weight: 400; // Regular
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Area-normal-thin";
+  src: url("/asset/font/AreaInktrapTrial-ThinItalic-BF65ea75c6321f6-iF663c9153dc057.otf")
+    format("opentype");
+
+  font-weight: 400; // Regular
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "Area-normal-exbold";
+  src: url("/asset/font/area-normal-black-demo.otf")
+    format("opentype");
+
+  
+}

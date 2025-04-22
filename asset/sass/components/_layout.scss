@@ -1,0 +1,46 @@
+.layout {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
+    border-radius: 15px;
+    // height: 418px;
+
+    @media (max-width: 1000px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__content {
+    padding: 8.7rem 9rem;
+    max-width: 414px;
+
+    &-2{
+      padding: 5rem 6.6rem ;
+      max-width: 592px;
+    }
+
+    @media (max-width: 1000px) {
+        padding: 4rem;
+        
+      }
+  }
+
+  &__img {
+
+    
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+
+    @media (max-width: 1000px) {
+      height: 418px;
+    }
+
+    img {
+      width: 120%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

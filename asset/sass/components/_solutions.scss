@@ -1,0 +1,57 @@
+.solutions {
+  padding: 8rem 0;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 305px 1fr;
+    gap: 8rem;
+    position: relative;
+
+    @media (max-width : 1000px) {
+        grid-template-columns: 1fr;
+    }
+  }
+
+  &__col {
+    &-left {
+        height: 34rem;
+        position: sticky;
+        top: 15px;
+
+        @media (max-width : 1000px) {
+            position: unset;
+        }
+      ul {
+        .active {
+          a {
+            color: $color-primary;
+          }
+        }
+        li {
+          padding: 2rem 0;
+          border-bottom: 1px solid $color-gray;
+          padding-right: 5.5rem;
+
+          a {
+            color: $color-gray-dark;
+
+            &:hover {
+              color: $color-primary;
+            }
+          }
+        }
+      }
+    }
+    &-right {
+      // display: flex;
+
+      // flex-wrap: wrap;
+
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+
+      column-gap: 3rem;
+      row-gap: 7.6rem;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.hardware {
+  padding: 10rem 0;
+
+  .swiper-container {
+    position: relative;
+    overflow: hidden;
+  }
+  .swiper-slide {
+    background-color: $color-white-2;
+    border-radius: 15px;
+
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+  }
+
+  &__content {
+    padding: 4rem;
+  }
+  &__left {
+    max-width: 242px;
+    display: inline-block;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__img {
+    max-width: 100px;
+  }
+}
